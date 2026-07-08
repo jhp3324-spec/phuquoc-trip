@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>푸꾸옥 가족여행 일정 · 8/4~8/8</title>
+<style>
+  :root{
+    --bg:#faf6ef; --card:#ffffff; --line:#e6dfd2;
+    --ink:#22303a; --sub:#6b7a86;
+    --teal:#0e7c7b; --teal-deep:#0a5a59; --teal-soft:#eaf4f3;
+    --coral:#e8603c; --coral-soft:#fdefe9;
+    --warn-bg:#fdf6ea; --warn-line:#eeddbd; --warn-ink:#7a5418;
+    --btn-ink:#ffffff;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#101b1d; --card:#182629; --line:#28393c;
+      --ink:#e9e5da; --sub:#93a3a8;
+      --teal:#3db3ab; --teal-deep:#7fd4cc; --teal-soft:#1b3234;
+      --coral:#ff8a63; --coral-soft:#33231d;
+      --warn-bg:#2a2415; --warn-line:#4a3d1f; --warn-ink:#e3c476;
+      --btn-ink:#0d1a1c;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#101b1d; --card:#182629; --line:#28393c;
+    --ink:#e9e5da; --sub:#93a3a8;
+    --teal:#3db3ab; --teal-deep:#7fd4cc; --teal-soft:#1b3234;
+    --coral:#ff8a63; --coral-soft:#33231d;
+    --warn-bg:#2a2415; --warn-line:#4a3d1f; --warn-ink:#e3c476;
+    --btn-ink:#0d1a1c;
+  }
+  :root[data-theme="light"]{
+    --bg:#faf6ef; --card:#ffffff; --line:#e6dfd2;
+    --ink:#22303a; --sub:#6b7a86;
+    --teal:#0e7c7b; --teal-deep:#0a5a59; --teal-soft:#eaf4f3;
+    --coral:#e8603c; --coral-soft:#fdefe9;
+    --warn-bg:#fdf6ea; --warn-line:#eeddbd; --warn-ink:#7a5418;
+    --btn-ink:#ffffff;
+  }
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;
+    font-size:16.5px;line-height:1.65;
+  }
+  .wrap{max-width:660px;margin:0 auto;padding:0 16px 72px}
+
+  header{
+    background:linear-gradient(150deg,var(--teal-deep),var(--teal));
+    color:#fff;text-align:center;padding:36px 20px 30px;
+  }
+  :root[data-theme="dark"] header, header{color:#fff}
+  header .dates{font-size:13px;letter-spacing:3px;opacity:.85}
+  header h1{margin:10px 0 6px;font-size:27px;text-wrap:balance}
+  header .sub{font-size:15px;opacity:.92;margin:0}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+  .badge{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:5px 13px;font-size:13px}
+
+  h2{font-size:19px;color:var(--teal-deep);margin:38px 0 14px;text-wrap:balance}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:480px){.grid{grid-template-columns:1fr}}
+  .info{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .info .label{font-size:11.5px;color:var(--sub);letter-spacing:1.5px;margin-bottom:3px}
+  .info .val{font-weight:700;font-size:15.5px}
+  .info .note{font-size:13px;color:var(--sub);margin-top:2px}
+
+  .day{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:22px;overflow:hidden}
+  .day-head{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line)}
+  .day-num{background:var(--coral);color:var(--btn-ink);font-weight:800;font-size:13px;border-radius:9px;padding:7px 11px;white-space:nowrap}
+  .day-num.rest{background:var(--teal)}
+  .day-head h3{margin:0;font-size:17.5px}
+  .day-head .theme{font-size:13px;color:var(--sub);margin-top:2px}
+
+  .route{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:12px 18px;background:var(--teal-soft);font-size:13px;border-bottom:1px solid var(--line)}
+  .route .stop{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-weight:600;color:var(--teal-deep)}
+  .route .arrow{color:var(--coral);font-weight:700}
+  .route .dur{color:var(--sub);font-size:12px}
+
+  .plan{padding:6px 18px 14px}
+  .item{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+  .item:last-child{border-bottom:none}
+  .item .time{flex:0 0 56px;font-weight:700;color:var(--teal-deep);font-size:14.5px;font-variant-numeric:tabular-nums}
+  .item .what{font-size:15px}
+  .item .what small{display:block;color:var(--sub);font-size:12.8px;margin-top:2px;line-height:1.55}
+  .tag{display:inline-block;font-size:11px;background:var(--coral-soft);color:var(--coral);border-radius:6px;padding:1px 7px;margin-left:5px;font-weight:700;vertical-align:middle}
+
+  .maplinks{display:flex;flex-wrap:wrap;gap:8px;padding:12px 18px 16px;border-top:1px solid var(--line)}
+  .gbtn{
+    flex:1 1 auto;display:flex;align-items:center;justify-content:center;gap:6px;
+    background:var(--teal);color:var(--btn-ink);text-decoration:none;
+    font-size:14px;font-weight:700;border-radius:11px;padding:12px 14px;min-height:20px;
+  }
+  .gbtn.alt{background:transparent;color:var(--teal-deep);border:1.5px solid var(--teal)}
+  .gbtn:active{opacity:.8}
+
+  .weather{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:16px;padding:18px;color:var(--warn-ink);font-size:14px;line-height:1.7}
+  .weather b{color:inherit}
+  .weather .fc{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+  .fc span{background:var(--card);border:1px solid var(--warn-line);border-radius:8px;padding:4px 9px;font-size:12.5px;color:var(--ink)}
+  .fc span.best{border-color:var(--teal);color:var(--teal-deep);font-weight:700}
+  .weather a{color:var(--teal-deep);font-weight:700}
+
+  .checks{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px 18px}
+  .checks div{padding:11px 0 11px 28px;position:relative;font-size:14.5px;border-bottom:1px dashed var(--line);line-height:1.6}
+  .checks div:last-child{border-bottom:none}
+  .checks div::before{content:"✓";position:absolute;left:2px;top:10px;color:var(--coral);font-weight:800}
+
+  footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:40px;line-height:1.7}
+  a:focus-visible,.gbtn:focus-visible{outline:2px solid var(--coral);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="dates">2026. 8. 4 (화) — 8. 8 (토)</div>
+  <h1>🌴 푸꾸옥 가족여행</h1>
+  <p class="sub">3대가 함께하는 휴양 + 사파리 · 6명</p>
+  <div class="badges">
+    <span class="badge">✈️ 대한항공 KE485 / KE486</span>
+    <span class="badge">🏝️ 빈펄 원더월드 빌라 3박</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h2>📋 핵심 정보</h2>
+  <div class="grid">
+    <div class="info"><div class="label">가는 편</div><div class="val">8/4(화) KE485</div><div class="note">인천 19:05 → 푸꾸옥 22:50 · T2 출발</div></div>
+    <div class="info"><div class="label">오는 편</div><div class="val">8/8(토) 00:10 KE486</div><div class="note">푸꾸옥 → 인천 07:50 (8/7 밤 공항행)</div></div>
+    <div class="info"><div class="label">숙소</div><div class="val">오션 헤이븐 빌라 3BR</div><div class="note">확정번호 VPDS***(카톡 확인) · 체크인 15시 / 아웃 12시</div></div>
+    <div class="info"><div class="label">보증금 (체크인)</div><div class="val">900만 VND (약 48만원)</div><div class="note">현금/카드 · 미사용분 체크아웃 시 환불</div></div>
+    <div class="info"><div class="label">뷔페</div><div class="val">조식 06:00–10:30</div><div class="note">중식 12–14시 / 석식 18–22시</div></div>
+    <div class="info"><div class="label">호텔 연락처</div><div class="val">+84 2973 550 550</div><div class="note">공항 픽업 비상: +84 787 811 818</div></div>
+  </div>
+
+  <h2>📅 DAY 1 · 8/4 (화)</h2>
+  <div class="day">
+    <div class="day-head">
+      <div class="day-num">이동일</div>
+      <div><h3>인천 출발 → 푸꾸옥 밤 도착</h3><div class="theme">무리하지 않고 바로 취침</div></div>
+    </div>
+    <div class="route">
+      <span class="stop">인천 T2</span><span class="arrow">→</span><span class="dur">5시간 45분</span><span class="arrow">→</span>
+      <span class="stop">푸꾸옥 공항</span><span class="arrow">→</span><span class="dur">셔틀 45~60분</span><span class="arrow">→</span>
+      <span class="stop">빌라</span>
+    </div>
+    <div class="plan">
+      <div class="item"><div class="time">16:00</div><div class="what">인천공항 T2 도착 · 체크인<small>6명 수속 — 출발 3시간 전 여유 있게</small></div></div>
+      <div class="item"><div class="time">19:05</div><div class="what">KE485 출발<small>기내에서 아이들 재우기 (현지 = 한국 −2시간)</small></div></div>
+      <div class="item"><div class="time">22:50</div><div class="what">푸꾸옥 도착 · 입국심사<small>한국 여권 무비자 45일</small></div></div>
+      <div class="item"><div class="time">23:30</div><div class="what">빈펄 무료 셔틀 탑승 <span class="tag">무료</span><small>국제선 도착게이트 나와 오른쪽 50m 'Vinpearl Guest Welcome Counter' · 전원 모이면 10~15분 후 출발</small></div></div>
+      <div class="item"><div class="time">00:30</div><div class="what">빌라 체크인 · 취침<small>여권 6명분 + 보증금 900만 VND · 트윈룸 1개, 나머지 킹베드</small></div></div>
+    </div>
+    <div class="maplinks">
+      <a class="gbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Phu+Quoc+International+Airport&amp;destination=Vinpearl+Wonderworld+Phu+Quoc&amp;travelmode=driving&amp;hl=ko">🧭 공항 → 숙소 길찾기</a>
+    </div>
+  </div>
+
+  <h2>📅 DAY 2 · 8/5 (수)</h2>
+  <div class="day">
+    <div class="day-head">
+      <div class="day-num rest">휴양</div>
+      <div><h3>리조트 휴양 + 저녁 그랜드월드</h3><div class="theme">적응의 날 — 수영장·해변에서 느긋하게</div></div>
+    </div>
+    <div class="route">
+      <span class="stop">빌라·수영장·해변</span><span class="arrow">→</span><span class="dur">빈버스 5~10분</span><span class="arrow">→</span>
+      <span class="stop">그랜드월드 야경</span>
+    </div>
+    <div class="plan">
+      <div class="item"><div class="time">~10:00</div><div class="what">늦은 기상 · 조식<small>조식 뷔페 10:30 마감 — 10시 전 입장</small></div></div>
+      <div class="item"><div class="time">10:30</div><div class="what">수영장 · 바이다이 해변 물놀이<small>오전 물놀이 + 자외선 차단 필수</small></div></div>
+      <div class="item"><div class="time">13:00</div><div class="what">점심 후 낮잠 · 휴식</div></div>
+      <div class="item"><div class="time">17:30</div><div class="what">그랜드월드 이동 (빈버스 무료)<small>확정번호로 QR 발급 → 탑승 시 제시</small></div></div>
+      <div class="item"><div class="time">18:30</div><div class="what">그랜드월드 저녁 + 산책<small>베네치아 곤돌라 · 야간 조명 · 21시 전 복귀</small></div></div>
+      <div class="item"><div class="time">저녁</div><div class="what">내일(사파리) 오전 날씨 예보 확인 <span class="tag">중요</span><small>오전 강수확률 60%↑면 사파리를 8/7 오전으로 변경</small></div></div>
+    </div>
+    <div class="maplinks">
+      <a class="gbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+World+Phu+Quoc&amp;hl=ko">📍 그랜드월드 지도</a>
+      <a class="gbtn alt" target="_blank" rel="noopener" href="https://www.google.com/search?q=%ED%91%B8%EA%BE%B8%EC%98%A5+%EB%82%A0%EC%94%A8">☀️ 날씨 확인</a>
+    </div>
+  </div>
+
+  <h2>📅 DAY 3 · 8/6 (목) ⭐</h2>
+  <div class="day">
+    <div class="day-head">
+      <div class="day-num">하이라이트</div>
+      <div><h3>빈펄 사파리 VIP 투어</h3><div class="theme">전용 버기카트 + 가이드 — 걷기 최소화 · 오전 = 우기의 건조 시간대</div></div>
+    </div>
+    <div class="route">
+      <span class="stop">빌라</span><span class="arrow">→</span><span class="dur">10~15분</span><span class="arrow">→</span>
+      <span class="stop">빈펄 사파리</span><span class="arrow">→</span><span class="dur">10~15분</span><span class="arrow">→</span>
+      <span class="stop">빌라 (오후 휴식)</span>
+    </div>
+    <div class="plan">
+      <div class="item"><div class="time">08:00</div><div class="what">아침식사 · 출발 준비<small>모자 · 물 · 선크림 · 유아 간식</small></div></div>
+      <div class="item"><div class="time">09:00</div><div class="what">사파리 입장 <span class="tag">사전예매</span><small>성인(1.4m↑) 85만 VND · 아동(1~1.4m) 65만 · 1m 미만 무료 · 60세↑ 경로 65만(신분증)</small></div></div>
+      <div class="item"><div class="time">09:10</div><div class="what">사파리 버스 투어 먼저<small>버스 9:00~15:20 약 20분 간격 — 오전 첫 타임이 동물 활동 최고</small></div></div>
+      <div class="item"><div class="time">10:15</div><div class="what">프리미엄 VIP 동물원 투어 <span class="tag">10:15 회차</span><small>성인(140cm↑) 1인 약 58,000원 · 60분 전용 버기카트 + 가이드 · <b>10:00까지 VIP 카운터(메인 매표소 옆) 집결</b></small></div></div>
+      <div class="item"><div class="time">11:30</div><div class="what">기린 먹이주기 · 동물원 구역<small>기린 먹이주기 10:30~15:00 · 호랑이 먹이주기 11:00·13:00 (회당 3만 VND)</small></div></div>
+      <div class="item"><div class="time">13:00</div><div class="what">점심 후 빌라 복귀 → 낮잠·수영<small>14:30 회차는 소나기 시간대라 비추천</small></div></div>
+    </div>
+    <div class="maplinks">
+      <a class="gbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Vinpearl+Wonderworld+Phu+Quoc&amp;destination=Vinpearl+Safari+Phu+Quoc&amp;travelmode=driving&amp;hl=ko">🧭 숙소 → 사파리 길찾기</a>
+    </div>
+  </div>
+
+  <h2>📅 DAY 4 · 8/7 (금)</h2>
+  <div class="day">
+    <div class="day-head">
+      <div class="day-num">출국일</div>
+      <div><h3>체크아웃 → 심야 출국</h3><div class="theme">저녁까지 리조트에서 쉬고 셔틀로 공항</div></div>
+    </div>
+    <div class="route">
+      <span class="stop">빌라 체크아웃</span><span class="arrow">→</span><span class="dur">무료 셔틀 (21:10경)</span><span class="arrow">→</span>
+      <span class="stop">푸꾸옥 공항</span>
+    </div>
+    <div class="plan">
+      <div class="item"><div class="time">~10:00</div><div class="what">마지막 오전 수영 · 짐 정리<small>레이트 체크아웃 무료 가능(방 여유 시) — 전날 문의</small></div></div>
+      <div class="item"><div class="time">12:00</div><div class="what">체크아웃 · 리조트에서 휴식<small>짐은 컨시어지 보관 · 전날 밤 빌라로 오는 드롭오프 안내문 확인</small></div></div>
+      <div class="item"><div class="time">18:00</div><div class="what">저녁식사 (호텔 뷔페 or 그랜드월드)<small>플랜 B: 야시장 원하면 개별 차량 17:30 출발 → 야시장 → 21:30 공항</small></div></div>
+      <div class="item"><div class="time">21:10</div><div class="what">호텔 무료 셔틀 출발<small>항공편 출발 2.5~3시간 전 출발</small></div></div>
+      <div class="item"><div class="time">22:00</div><div class="what">공항 도착 · 수속<small>출발 2시간 전 수속 마감 주의</small></div></div>
+      <div class="item"><div class="time">00:10</div><div class="what">KE486 출발 → 8/8(토) 07:50 인천 도착</div></div>
+    </div>
+    <div class="maplinks">
+      <a class="gbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Vinpearl+Wonderworld+Phu+Quoc&amp;destination=Phu+Quoc+Night+Market&amp;travelmode=driving&amp;hl=ko">🧭 숙소 → 야시장</a>
+      <a class="gbtn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;origin=Phu+Quoc+Night+Market&amp;destination=Phu+Quoc+International+Airport&amp;travelmode=driving&amp;hl=ko">🧭 야시장 → 공항</a>
+    </div>
+  </div>
+
+  <h2>☔ 날씨 & 사파리 운영 규칙</h2>
+  <div class="weather">
+    <b>8월은 우기 절정</b> — 비는 대부분 <b>늦은 오후~저녁 1~3시간 소나기</b>, <b>오전은 대체로 맑음.</b> 태풍 직격은 드묾.
+    <div class="fc">
+      <span>8/4 · 3.4mm</span><span>8/5 · 3.4mm</span><span class="best">8/6 · 0.7mm ✅ 최적</span><span>8/7 · 2.9mm</span><span>8/8 · 0.6mm</span>
+    </div>
+    장기예보(7/8 확인)상 <b>사파리 8/6 유지가 최선.</b> 단 신뢰도가 낮으니:<br>
+    ① 8/5 저녁에 다음날 예보 재확인 → 8/6 오전 강수확률 60%↑면 <b>8/7 오전으로 변경</b> (9:00~11:30 투어 후 체크아웃)<br>
+    ② 소나기 중 실내 대안: 그랜드월드 · 키즈클럽 · 우비 6벌 + 접이식 우산<br><br>
+    <a target="_blank" rel="noopener" href="https://www.google.com/search?q=%ED%91%B8%EA%BE%B8%EC%98%A5+%EB%82%A0%EC%94%A8">구글 날씨</a> ·
+    <a target="_blank" rel="noopener" href="https://www.accuweather.com/ko/vn/phu-quoc/352624/daily-weather-forecast/352624">아큐웨더</a> ·
+    <a target="_blank" rel="noopener" href="https://www.windy.com/10.227/103.964?rain,10.227,103.964,10">Windy 레이더</a>
+  </div>
+
+  <h2>✅ 출발 전 체크리스트</h2>
+  <div class="checks">
+    <div><b>호텔 회신 (늦어도 8/2까지)</b> — 편명 KE485/KE486 + 6명 이름·생년월일 → res.VPDSWWPQ@vinpearl.com · 없으면 무료 셔틀 배차 불가</div>
+    <div><b>7/30 아고다 잔금 ₩1,805,739 자동결제</b> — 카드 한도 확인</div>
+    <div>여권 전원 확인 완료 — 단 일부 여권은 6개월 요건을 아슬하게 통과 — 개인별 상세는 별도 확인</div>
+    <div><b>사파리 입장권 + VIP 투어 10:15 회차 예매</b> — 조부모 경로할인 · 둘째(1m 미만) 무료 · 첫째는 키 기준 확인</div>
+    <div><b>보증금 900만 VND</b> 현금/카드 준비</div>
+    <div><b>빈버스 QR 발급</b> — 확정번호 VPDS***(카톡 확인) (아고다 원문 메일 링크)</div>
+    <div>유심/이심 · 트래블카드 · VND 소액 환전</div>
+    <div>아이용: 모자·선크림·수영조끼·해열제·모기기피제 · 유아 이유식/기저귀</div>
+    <div>심야 체크인(8/5 00시 이후) + 8/7 레이트 체크아웃 사전 요청</div>
+  </div>
+
+  <footer>
+    지도 버튼을 누르면 구글지도 앱에서 길찾기가 열립니다<br>
+    예약: 아고다 17144*** · 호텔 505*** · 2026.7.8 업데이트
+  </footer>
+</div>
+
+</body>
+</html>

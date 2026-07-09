@@ -106,6 +106,12 @@
   .fc span.best{border-color:var(--teal);color:var(--teal-deep);font-weight:700}
   .weather a{color:var(--teal-deep);font-weight:700}
 
+  .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;overflow-x:auto}
+  .tblwrap table{border-collapse:collapse;width:100%;font-size:12.8px}
+  .tblwrap th,.tblwrap td{border:1px solid var(--line);padding:7px 9px;white-space:nowrap;text-align:left;font-variant-numeric:tabular-nums}
+  .tblwrap th{background:var(--teal-soft);color:var(--teal-deep)}
+  .tblwrap .warn-td{color:var(--coral);font-weight:700}
+
   .checks{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:8px 18px}
   .checks div{padding:11px 0 11px 28px;position:relative;font-size:14.5px;border-bottom:1px dashed var(--line);line-height:1.6}
   .checks div:last-child{border-bottom:none}
@@ -133,10 +139,31 @@
   <div class="grid">
     <div class="info"><div class="label">가는 편</div><div class="val">8/4(화) KE485</div><div class="note">인천 19:05 → 푸꾸옥 22:50 · T2 출발</div></div>
     <div class="info"><div class="label">오는 편</div><div class="val">8/8(토) 00:10 KE486</div><div class="note">푸꾸옥 → 인천 07:50 (8/7 밤 공항행)</div></div>
-    <div class="info"><div class="label">숙소</div><div class="val">오션 헤이븐 빌라 3BR</div><div class="note">확정번호 VPDS***(카톡 확인) · 체크인 15시 / 아웃 12시</div></div>
+    <div class="info"><div class="label">숙소</div><div class="val">오션 헤이븐 빌라 3BR</div><div class="note">확정번호 VPDS1PQ7366385 · 체크인 15시 / 아웃 12시</div></div>
     <div class="info"><div class="label">보증금 (체크인)</div><div class="val">900만 VND (약 48만원)</div><div class="note">현금/카드 · 미사용분 체크아웃 시 환불</div></div>
     <div class="info"><div class="label">뷔페</div><div class="val">조식 06:00–10:30</div><div class="note">중식 12–14시 / 석식 18–22시</div></div>
     <div class="info"><div class="label">호텔 연락처</div><div class="val">+84 2973 550 550</div><div class="note">공항 픽업 비상: +84 787 811 818</div></div>
+  </div>
+
+  <h2>🎫 예약 · 여권 정보</h2>
+  <div class="grid">
+    <div class="info"><div class="label">대한항공 예약번호 (PNR)</div><div class="val">EMJSII / EMBD47</div><div class="note">EMJSII: 박수종·지연숙·장지현 · EMBD47: 박진형·박은총·박은성</div></div>
+    <div class="info"><div class="label">아고다 · 호텔 예약</div><div class="val">아고다 1714494380</div><div class="note">호텔 예약번호 505 8550 · 확정번호 VPDS1PQ7366385</div></div>
+    <div class="info"><div class="label">숙박 결제</div><div class="val">₩1,805,739</div><div class="note">7/30 카드 자동결제 · 보증금 900만 VND 별도(환불됨)</div></div>
+    <div class="info"><div class="label">빈원더스 VIP 투어</div><div class="val">8/6 10:15 회차 결제 완료</div><div class="note">주문 cddd6bd1-05e7-4bf8-8275-b42b51975325</div></div>
+  </div>
+  <div class="tblwrap" style="margin-top:12px">
+    <table>
+      <thead><tr><th>이름</th><th>영문명</th><th>생년월일</th><th>여권번호</th><th>여권만료</th><th>항공권번호</th><th>좌석 (가는편/오는편)</th></tr></thead>
+      <tbody>
+        <tr><td>박수종 (아버지)</td><td>PARK SOO JONG</td><td>1959-07-09</td><td>M874Z6525</td><td>2032-05-11</td><td>1802356893435</td><td>31D / 30C</td></tr>
+        <tr><td>지연숙 (어머니)</td><td>JI YEON SUK</td><td>1963-09-08</td><td>M588S8964</td><td>2032-05-11</td><td>1802356893436</td><td>31E / 30B</td></tr>
+        <tr><td>박진형</td><td>PARK JINHYEONG</td><td>1985-11-01</td><td>M02531298</td><td class="warn-td">2027-02-27 ⚠</td><td>1802356893279</td><td>30E / 29A</td></tr>
+        <tr><td>장지현</td><td>JANG JIHYEON</td><td>1987-11-15</td><td>M186N3863</td><td>2034-05-08</td><td>1802356893437</td><td>31F / 31A</td></tr>
+        <tr><td>박은총 (소아)</td><td>PARK EUNCHONG</td><td>2022-07-05</td><td>M06508860</td><td>2028-03-24</td><td>1802356893280</td><td>30F / 30A</td></tr>
+        <tr><td>박은성 (유아)</td><td>PARK EUNSUNG</td><td>2024-12-13</td><td>M289N8135</td><td>2030-08-26</td><td>1802356893278</td><td>좌석 없음 (동반유아)</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <h2>🗺️ 전체 지도</h2>
@@ -271,12 +298,12 @@
   <div class="checks">
     <div><b>호텔 회신 (늦어도 8/2까지)</b> — 편명 KE485/KE486 + 6명 이름·생년월일 → res.VPDSWWPQ@vinpearl.com · 없으면 무료 셔틀 배차 불가</div>
     <div><b>7/30 아고다 잔금 ₩1,805,739 자동결제</b> — 카드 한도 확인</div>
-    <div>여권 전원 확인 완료 — 단 일부 여권은 6개월 요건을 아슬하게 통과 — 개인별 상세는 별도 확인</div>
-    <div><b>사파리 VIP 투어 10:15 회차 결제 완료 ✅</b> — 7/8 빈원더스 공식 예약 (주문 cddd***)</div>
+    <div>여권 전원 확인 완료 — 단 <b>박진형 여권(27.2.27 만료)</b>은 6개월 요건 23일 차이 통과, 여유 있게 갱신 고려</div>
+    <div><b>사파리 VIP 투어 10:15 회차 결제 완료 ✅</b> — 7/8 빈원더스 공식 예약 (주문 cddd6bd1…)</div>
     <div><b>빈원더스 확인 메일의 바우처/QR 저장</b> — 휴대폰 캡쳐 보관, 현장에서 QR 제시</div>
-    <div><b>2일 콤보(8/5 빈원더스 + 8/6 사파리) 결제 마무리</b> — 성인 2 + 노인 2 약 344,588원 · 환불/취소 불가(사용일 1회 무료 변경 가능) · 둘째(1m 미만) 무료, <b>첫째는 키 1m 넘으면 아동권 추가</b> · 입장 시 FaceID 촬영 · 식사 바우처는 첫날 지정 식당 1회</div>
+    <div><b>2일 콤보(8/5 빈원더스 + 8/6 사파리) 결제 마무리</b> — 성인 2 + 노인 2 약 344,588원 · 환불/취소 불가(사용일 1회 무료 변경 가능) · 은성(1m 미만) 무료, <b>은총 키 1m 넘으면 아동권 추가</b> · 입장 시 FaceID 촬영 · 식사 바우처는 첫날 지정 식당 1회</div>
     <div><b>보증금 900만 VND</b> 현금/카드 준비</div>
-    <div><b>빈버스 QR 발급</b> — 확정번호 VPDS***(카톡 확인) (아고다 원문 메일 링크)</div>
+    <div><b>빈버스 QR 발급</b> — 확정번호 VPDS1PQ7366385 (아고다 원문 메일 링크)</div>
     <div>유심/이심 · 트래블카드 · VND 소액 환전</div>
     <div>아이용: 모자·선크림·수영조끼·해열제·모기기피제 · 유아 이유식/기저귀</div>
     <div>심야 체크인(8/5 00시 이후) + 8/7 레이트 체크아웃 사전 요청</div>
@@ -284,7 +311,7 @@
 
   <footer>
     지도 버튼을 누르면 구글지도 앱에서 길찾기가 열립니다<br>
-    예약: 아고다 17144*** · 호텔 505*** · 2026.7.8 업데이트
+    예약: 아고다 1714494380 · 호텔 5058550 · 2026.7.8 업데이트
   </footer>
 </div>
 

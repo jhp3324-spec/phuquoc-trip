@@ -117,6 +117,37 @@
   .checks div:last-child{border-bottom:none}
   .checks div::before{content:"✓";position:absolute;left:2px;top:10px;color:var(--coral);font-weight:800}
 
+  html{scroll-behavior:smooth}
+  .qnav{
+    position:sticky;top:0;z-index:50;display:flex;gap:7px;overflow-x:auto;
+    padding:10px 14px;background:var(--bg);border-bottom:1px solid var(--line);
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+  }
+  .qnav::-webkit-scrollbar{display:none}
+  .qnav a{
+    flex:0 0 auto;background:var(--card);border:1px solid var(--line);border-radius:999px;
+    padding:8px 14px;font-size:13.5px;font-weight:700;color:var(--teal-deep);
+    text-decoration:none;white-space:nowrap;min-height:20px;display:flex;align-items:center;
+  }
+  .qnav a:active{background:var(--teal-soft)}
+  h2,.day{scroll-margin-top:66px}
+  @media(max-width:640px){
+    header{padding:26px 16px 22px}
+    header h1{font-size:23px}
+    header .sub{font-size:14px}
+    body{font-size:16px}
+    .wrap{padding:0 12px 64px}
+    h2{font-size:18px;margin:30px 0 12px}
+    .tblwrap td{white-space:normal;word-break:keep-all}
+    .item .time{flex:0 0 50px;font-size:14px}
+    .item .what{font-size:14.5px}
+    .route{font-size:12.5px;padding:10px 14px}
+    .day-head{padding:14px 14px}
+    .plan{padding:4px 14px 12px}
+    .maplinks{padding:10px 14px 14px}
+    .checks{padding:6px 14px}
+    .checks div{font-size:14px}
+  }
   footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:40px;line-height:1.7}
   a:focus-visible,.gbtn:focus-visible{outline:2px solid var(--coral);outline-offset:2px}
 </style>
@@ -132,10 +163,13 @@
     <span class="badge">🏝️ 빈펄 원더월드 빌라 3박</span>
   </div>
 </header>
+<nav class="qnav" aria-label="빠른 이동">
+  <a href="#info">📋 핵심</a><a href="#booking">🎫 예약</a><a href="#d1">8/4</a><a href="#d2">8/5</a><a href="#d3">8/6</a><a href="#d4">8/7</a><a href="#weather">☔ 날씨</a><a href="#checks">✅ 체크</a><a href="https://jhp3324-spec.github.io/phuquoc-trip/status.html">현황</a>
+</nav>
 
 <div class="wrap">
 
-  <h2>📋 핵심 정보</h2>
+  <h2 id="info">📋 핵심 정보</h2>
   <div class="grid">
     <div class="info"><div class="label">가는 편</div><div class="val">8/4(화) KE485</div><div class="note">인천 19:05 → 푸꾸옥 22:50 · T2 출발</div></div>
     <div class="info"><div class="label">오는 편</div><div class="val">8/8(토) 00:10 KE486</div><div class="note">푸꾸옥 → 인천 07:50 (8/7 밤 공항행)</div></div>
@@ -145,7 +179,7 @@
     <div class="info"><div class="label">호텔 연락처</div><div class="val">+84 2973 550 550</div><div class="note">공항 픽업 비상: +84 787 811 818</div></div>
   </div>
 
-  <h2>🎫 예약 · 여권 정보</h2>
+  <h2 id="booking">🎫 예약 · 여권 정보</h2>
   <div class="grid">
     <div class="info"><div class="label">대한항공 예약번호 (PNR)</div><div class="val">EMJSII / EMBD47</div><div class="note">EMJSII: 박수종·지연숙·장지현 · EMBD47: 박진형·박은총·박은성</div></div>
     <div class="info"><div class="label">아고다 · 호텔 예약</div><div class="val">아고다 1714494380</div><div class="note">호텔 예약번호 505 8550 · 확정번호 VPDS1PQ7366385</div></div>
@@ -154,7 +188,7 @@
     <div class="info"><div class="label">빈원더스 2일 콤보</div><div class="val">결제 완료 · 성인2+아동1+노인2</div><div class="note">주문번호 VPT-TSCVUM220726 · 사용기한 8/5~8/6 · 총 730만 VND(약 41만원) · 노인 티켓은 입장 시 여권 원본 제시</div></div>
   </div>
 
-  <h2>📎 문서 다운로드</h2>
+  <h2 id="docs">📎 문서 다운로드</h2>
   <div class="tblwrap">
     <table>
       <thead><tr><th>이름</th><th>항공권 (e티켓)</th><th>여권 사본</th></tr></thead>
@@ -182,7 +216,7 @@
     </div>
   </div>
 
-  <h2>📅 DAY 1 · 8/4 (화)</h2>
+  <h2 id="d1">📅 DAY 1 · 8/4 (화)</h2>
   <div class="day">
     <div class="day-head">
       <div class="day-num">이동일</div>
@@ -207,7 +241,7 @@
     </div>
   </div>
 
-  <h2>📅 DAY 2 · 8/5 (수)</h2>
+  <h2 id="d2">📅 DAY 2 · 8/5 (수)</h2>
   <div class="day">
     <div class="day-head">
       <div class="day-num rest">콤보 1일차</div>
@@ -244,7 +278,7 @@
     </div>
   </div>
 
-  <h2>📅 DAY 3 · 8/6 (목) ⭐</h2>
+  <h2 id="d3">📅 DAY 3 · 8/6 (목) ⭐</h2>
   <div class="day">
     <div class="day-head">
       <div class="day-num">하이라이트</div>
@@ -278,7 +312,7 @@
     </div>
   </div>
 
-  <h2>📅 DAY 4 · 8/7 (금)</h2>
+  <h2 id="d4">📅 DAY 4 · 8/7 (금)</h2>
   <div class="day">
     <div class="day-head">
       <div class="day-num rest">출국일</div>
@@ -308,7 +342,7 @@
     </div>
   </div>
 
-  <h2>☔ 날씨 & 사파리 운영 규칙</h2>
+  <h2 id="weather">☔ 날씨 & 사파리 운영 규칙</h2>
   <div class="weather">
     <b>8월은 우기 절정</b> — 비는 대부분 <b>늦은 오후~저녁 1~3시간 소나기</b>, <b>오전은 대체로 맑음.</b> 태풍 직격은 드묾.
     <div class="fc">
@@ -322,7 +356,7 @@
     <a target="_blank" rel="noopener" href="https://www.windy.com/10.227/103.964?rain,10.227,103.964,10">Windy 레이더</a>
   </div>
 
-  <h2>✅ 출발 전 체크리스트</h2>
+  <h2 id="checks">✅ 출발 전 체크리스트</h2>
   <div class="checks">
     <div><b>호텔 회신 완료 · 셔틀 왕복 확정 ✅ (7/22 호텔 답신)</b> — 픽업 KE485(8/4) + 드롭오프 KE486(8/8 새벽, 비행 3시간 전 호텔 출발) · 6명 · 무료 호텔 셔틀 · 도착게이트 밖 VINPEARL 피켓, 전원 모이면 10~15분 후 출발 · 비상연락 +84 787 811 818 · 편명 변경 시 24시간 전 통보</div>
     <div><b>7/30 아고다 잔금 ₩1,805,739 자동결제</b> — 카드 한도 확인</div>
@@ -342,7 +376,7 @@
 
   <footer>
     지도 버튼을 누르면 구글지도 앱에서 길찾기가 열립니다<br>
-    예약: 아고다 1714494380 · 호텔 5058550 · 2026.7.23 업데이트 (콤보 결제 완료 · 호텔 회신 확정 반영)
+    예약: 아고다 1714494380 · 호텔 5058550 · 2026.7.28 업데이트 (모바일 최적화 · 빠른이동 바 추가)
   </footer>
 </div>
 
